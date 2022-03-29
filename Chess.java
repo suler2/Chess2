@@ -11,11 +11,6 @@ public class Chess {
 
         Blackpawn bp = new Blackpawn();
 
-        
-    }
-}
-
-/**
         JFrame frame = new JFrame();
         frame.setBounds(10, 10, 640, 640);
         JPanel panel = new JPanel() {
@@ -41,5 +36,8 @@ public class Chess {
     frame.add(panel);
     frame.setDefaultCloseOperation(3);
     frame.setVisible(true);
-    */
+        
+    }
+}
+    
 //    frame.setResizable(false);
