@@ -11,11 +11,15 @@ public abstract class Piece {
 
     protected boolean alive;
     protected boolean side;
+    protected int x;
+    protected int y;
 
-    public Piece(boolean side) {
+    public Piece(boolean side, int x, int y) {
 //        initPieceImage();
         this.alive = true;
         this.side = side;
+        this.x = x;
+        this.y = y;
     }
 
     public boolean getAliveStatus() {
@@ -28,6 +32,19 @@ public abstract class Piece {
 
     public void revive() {
         this.alive = true;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public int getY() {
+        return this.y;
+    }
+
+    public int[] getPos() {
+        int[] pos = {1, 2};
+        return pos;
     }
 
     public boolean[][] getValidMoves(int[][] sahovnica, int x, int y) {
@@ -69,5 +86,4 @@ public abstract class Piece {
         
     }
     */
-
 }

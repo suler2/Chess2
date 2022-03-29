@@ -3,15 +3,15 @@ package Pieces;
 import java.awt.image.BufferedImage;
 
 public class Bishop extends Piece {
-    private static final int ID = 3;
+    private static final int ID = 2;
     private static int value = 30;
 
-    public Bishop() {
-        super(true);
+    public Bishop(int x, int y) {
+        super(true, x, y);
     }
 
-    public Bishop(boolean side) {
-        super(true);
+    public Bishop(boolean side, int x, int y) {
+        super(true, x, y);
     }
 
     public int getID() {

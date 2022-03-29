@@ -2,18 +2,16 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-import javax.print.attribute.standard.QueuedJobCount;
-
 public class Queen extends Piece {
-    private static final int ID = 6;
+    private static final int ID = 5;
     private static int value = 80;
 
-    public Queen() {
-        super(true);
+    public Queen(int x, int y) {
+        super(true, x, y);
     }
 
-    public Queen(boolean side) {
-        super(true);
+    public Queen(boolean side, int x, int y) {
+        super(true, x, y);
     }
 
     public int getID() {

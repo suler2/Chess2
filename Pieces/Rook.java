@@ -3,15 +3,15 @@ package Pieces;
 import java.awt.image.BufferedImage;
 
 public class Rook extends Piece {
-    private static final int ID = 5;
+    private static final int ID = 4;
     private static int value = 50;
 
-    public Rook() {
-        super(true);
+    public Rook(int x, int y) {
+        super(true, x, y);
     }
 
-    public Rook(boolean side) {
-        super(true);
+    public Rook(boolean side, int x, int y) {
+        super(true, x, y);
     }
 
     public int getID() {
