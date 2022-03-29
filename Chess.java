@@ -1,8 +1,16 @@
 import java.awt.*;
 import javax.swing.*;
+import Pieces.*;
 
 public class Chess {
     public static void main(String[] args) {
+
+        int[][] sahovnica = new int[8][8];
+
+    }
+}
+
+/**
         JFrame frame = new JFrame();
         frame.setBounds(10, 10, 640, 640);
         JPanel panel = new JPanel() {
@@ -17,7 +25,7 @@ public class Chess {
                             g.setColor(Color.white);
                         else 
                             g.setColor(Color.black);
-                        g.fillRect(j * 80, i * 80, 80, 80);
+                        g.fillRect(j * x / 8, i * y / 8, x / 8, y / 8);
                         white = !white;
                     }
                     white = !white;
@@ -25,12 +33,8 @@ public class Chess {
             }
         };
     panel.setBorder(BorderFactory.createLineBorder(Color.black));
-    panel.
     frame.add(panel);
     frame.setDefaultCloseOperation(3);
     frame.setVisible(true);
+    */
 //    frame.setResizable(false);
-    //    Player first = new Player();
-    //    Player secnd = new Player();
-    }
-}
