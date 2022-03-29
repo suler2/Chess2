@@ -8,7 +8,8 @@ import java.io.*;
 import java.lang.*;
 
 public abstract class Piece {
-    protected BufferedImage piecesImage;
+    protected BufferedImage wholeImage;
+    protected BufferedImage pieceImage;
 
     protected boolean alive;
     protected int x;
@@ -43,19 +44,15 @@ public abstract class Piece {
         boolean[][] validMoves = new boolean[8][8];
         for(int i = 0; i < 8; i++) {
             for(int j = 0; j < 8; j++) {
-                if(isMoveValid(sahovnica, i, j)) validMoves[i][j] = true;
+                if(validMoves(sahovnica, i, j)) validMoves[i][j] = true;
             }
         }
         return validMoves;
     }
-    
-    public abstract int getID();
-    public abstract int getValue();
-    public abstract boolean validMoves(int[][] sahovnica, int x, int y);
 
     public void initPieceImage() {
         try {
-            piecesImage = ImageIO.read(new File("img/640px-Chess_Pieces_Sprite.svg.png"));
+            wholeImage = ImageIO.read(new File("img/640px-Chess_Pieces_Sprite.svg.png"));
         }
         catch (Exception e) {
             System.out.println("Piece image initialization error!");
@@ -65,19 +62,8 @@ public abstract class Piece {
         }
     }
 
-//    public abstract void createPieceImage();
-
-/**
- *  Za dobivanje posameznih figur
-    public void createPieceImage() {
-        int width = piecesImage.getwidth() / 6;
-        int height = piecesImage.getHeight() / 2;
-        BufferedImage whitepawnImage = piecesImage.getSubimage(
-                                       5 * (piecesImage.getwidth() / 6),
-                                       0,
-                                       piecesImage.getwidth() / 6,
-                                       piecesImage.getwidth() / 2);
-        
-    }
-    */
+    public abstract int getID();
+    public abstract int getValue();
+    public abstract boolean validMoves(int[][] sahovnica, int x, int y);
+    public abstract void createPieceImage(BufferedImage wholeImage);
 }
