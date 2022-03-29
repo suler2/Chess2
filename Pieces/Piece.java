@@ -1,3 +1,6 @@
+/** Top level class za figure.
+ */
+
 package Pieces;
 
 import java.awt.image.BufferedImage;
@@ -15,6 +18,7 @@ public abstract class Piece {
     protected int y;
 
     public Piece() {
+        this.alive = true;
         initPieceImage();
     }
 
@@ -43,7 +47,7 @@ public abstract class Piece {
         boolean[][] validMoves = new boolean[8][8];
         for(int i = 0; i < 8; i++) {
             for(int j = 0; j < 8; j++) {
-                if(isMoveValid(sahovnica, i, j)) validMoves[i][j] = true;
+                if(validMoves(sahovnica, i, j)) validMoves[i][j] = true;
             }
         }
         return validMoves;
