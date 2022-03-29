@@ -2,15 +2,15 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-public class Whitepawn extends Piece {
-    private static final int ID = 1;
-    private static int value = 10;
+public class King extends Piece {
+    private static final int ID = 7;
+    private static int value = 1000;
 
-    public Whitepawn() {
+    public King() {
         super(true);
     }
 
-    public Whitepawn(boolean side) {
+    public King(boolean side) {
         super(true);
     }
 

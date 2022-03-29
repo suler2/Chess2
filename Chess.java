@@ -6,7 +6,12 @@ public class Chess {
     public static void main(String[] args) {
 
         int[][] sahovnica = new int[8][8];
+        Piece wp = new Whitepawn();
+        if(wp.getAliveStatus()) System.out.println("A");
 
+        Blackpawn bp = new Blackpawn();
+
+        
     }
 }
 

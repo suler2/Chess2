@@ -2,15 +2,17 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-public class Whitepawn extends Piece {
-    private static final int ID = 1;
-    private static int value = 10;
+import javax.print.attribute.standard.QueuedJobCount;
 
-    public Whitepawn() {
+public class Queen extends Piece {
+    private static final int ID = 6;
+    private static int value = 80;
+
+    public Queen() {
         super(true);
     }
 
-    public Whitepawn(boolean side) {
+    public Queen(boolean side) {
         super(true);
     }
 

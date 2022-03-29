@@ -2,15 +2,15 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-public class Whitepawn extends Piece {
-    private static final int ID = 1;
+public class Blackpawn extends Piece {
+    private static final int ID = 2;
     private static int value = 10;
 
-    public Whitepawn() {
+    public Blackpawn() {
         super(true);
     }
 
-    public Whitepawn(boolean side) {
+    public Blackpawn(boolean side) {
         super(true);
     }
 
@@ -25,4 +25,6 @@ public class Whitepawn extends Piece {
     public boolean isMoveValid(int[][] sahovnica, int x, int y) {
         return false;
     }
+
+    
 }
