@@ -2,8 +2,8 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-public abstract class Knight extends Piece {
-    private static int value = 35;
+public abstract class Pawn extends Piece {
+    private static int value = 10; 
 
     public int getValue() {
         return value;

@@ -2,10 +2,10 @@ package Pieces;
 
 import java.awt.image.BufferedImage;
 
-public class Blackpawn extends Pawn {
-    private static final int ID = 20;
+public class Whiteking extends King {
+    private static final int ID = 15;
 
-    public Blackpawn(int x, int y) {
+    public Whiteking(int x, int y) {
         this.x = x;
         this.y = y;
     }

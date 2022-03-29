@@ -5,21 +5,17 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.*;
 
+import java.lang.*;
 
 public abstract class Piece {
-//    protected BufferedImage piecesImage;
+    protected BufferedImage piecesImage;
 
     protected boolean alive;
-    protected boolean side;
     protected int x;
     protected int y;
 
-    public Piece(boolean side, int x, int y) {
-//        initPieceImage();
-        this.alive = true;
-        this.side = side;
-        this.x = x;
-        this.y = y;
+    public Piece() {
+        initPieceImage();
     }
 
     public boolean getAliveStatus() {
@@ -28,10 +24,6 @@ public abstract class Piece {
 
     public void kill() {
         this.alive = false;
-    }
-
-    public void revive() {
-        this.alive = true;
     }
 
     public int getX() {
@@ -43,7 +35,7 @@ public abstract class Piece {
     }
 
     public int[] getPos() {
-        int[] pos = {1, 2};
+        int[] pos = {x, y};
         return pos;
     }
 
@@ -61,16 +53,18 @@ public abstract class Piece {
     public abstract int getValue();
     public abstract boolean isMoveValid(int[][] sahovnica, int x, int y);
 
-/**
     public void initPieceImage() {
         try {
-            piecesImage = ImageIO.read(new File("./Pieces/640px-Chess-Pieces-Sprite.svg.png"));
+            piecesImage = ImageIO.read(new File("img/640px-Chess_Pieces_Sprite.svg.png"));
         }
-        catch (IOException e) {
+        catch (Exception e) {
             System.out.println("Piece image initialization error!");
+            e.printStackTrace();
+            System.out.println(e);
+            
         }
     }
-*/
+
 //    public abstract void createPieceImage();
 
 /**
