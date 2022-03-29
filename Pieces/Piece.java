@@ -51,7 +51,7 @@ public abstract class Piece {
     
     public abstract int getID();
     public abstract int getValue();
-    public abstract boolean isMoveValid(int[][] sahovnica, int x, int y);
+    public abstract boolean validMoves(int[][] sahovnica, int x, int y);
 
     public void initPieceImage() {
         try {

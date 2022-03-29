@@ -14,7 +14,7 @@ public class Whitebishop extends Bishop {
         return ID;
     }
 
-    public boolean isMoveValid(int[][] sahovnica, int x, int y) {
+    public boolean validMoves(int[][] sahovnica, int x, int y) {
         return false;
     }
 }
